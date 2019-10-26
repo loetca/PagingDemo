@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+	<!-- 自定义配置 -->
+	<named-config name="myc3p0cfg">
+		<property name="driverClass">com.mysql.jdbc.Driver</property>
+		<property name="jdbcUrl">jdbc:mysql://127.0.0.1:3306/test?characterEncoding=UTF-8</property>
+		<property name="user">???</property>
+		<property name="password">???</property>
+
+		<!-- 初始连接数 -->
+		<property name="initialPoolSize">1</property>
+		<!-- 需要申请新连接时，一次申请的连接数 -->
+		<property name="acquireIncrement">3</property>
+		<!-- 最小连接数 -->
+		<property name="minPoolSize">1</property>
+		<!-- 最大连接数 -->
+		<property name="maxPoolSize">5</property>
+		<!-- 会话超时时间（单位：毫秒） -->
+		<property name="checkoutTimeout">10000</property>
+	</named-config>
+</c3p0-config>
